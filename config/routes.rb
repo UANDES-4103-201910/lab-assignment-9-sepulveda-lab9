@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get '/sign_in' => 'registrations#new', as: :registrations
   post '/sign_in' => 'registrations#create', as: :sign_in
 
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 end

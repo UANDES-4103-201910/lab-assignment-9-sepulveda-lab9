@@ -6,12 +6,19 @@ class Ability
   def initialize(user)
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-      if user.present?  # additional permissions for logged in users (they can read their own posts)
-        can :read, Post, user_id: user.id
+      if user.admin?  # additional permissions for administrators
+        can :manage, Event
+        can :manage, User
+        can :manage, UserTicket
+        can :manage, Ticket
+        can :manage, Place
 
-        if user.admin?  # additional permissions for administrators
-             can :read, post
-        end
+      else
+        can :read, Event
+        can :read, User
+        can :read, UserTicket
+        can :read, Ticket
+        can :read, Place
       end
   end
 end

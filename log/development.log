@@ -3525,3 +3525,925 @@ true by adding the following to your application.rb file:
 
   Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
  (called from <top (required)> at /home/camila/Desktop/lab-assignment-9-sepulveda-lab9/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/camila/Desktop/lab-assignment-9-sepulveda-lab9/app/models/application_record.rb:1)
+Started GET "/" for 127.0.0.1 at 2019-05-23 21:51:58 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1219ms (Views: 1201.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2019-05-23 21:52:07 -0400
+Processing by Devise::OmniauthCallbacksController#passthru as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-23 21:52:10 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 382ms (Views: 380.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-23 21:52:14 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 501ms (Views: 448.9ms | ActiveRecord: 0.9ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/camila/Desktop/lab-assignment-9-sepulveda-lab9/app/models/application_record.rb:1)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 17:57:11 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (72.8ms)
+Completed 200 OK in 1296ms (Views: 1203.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-05-25 17:57:25 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"grslggkZVM2+OJneFEarSo9uzPrMwLYQ7eKNT75UQNdXl5H/IpRQSjDyRz00xutQsawL8Ibmv0dpNWSHANvHPQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"grslggkZVM2+OJneFEarSo9uzPrMwLYQ7eKNT75UQNdXl5H/IpRQSjDyRz00xutQsawL8Ibmv0dpNWSHANvHPQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 483ms (Views: 481.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-05-25 17:57:30 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (5.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 569ms (Views: 567.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 17:57:34 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 452ms (Views: 447.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-05-25 17:57:36 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (5.4ms)
+  Rendered devise/shared/_links.html.erb (4.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 468ms (Views: 465.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-05-25 17:57:55 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JsNxHcE7slibCXmfZq0x8NzDKOqoue1kl6m3MxO2eL++fuOzaI+f/G5cn5oMHH1xicyrg7Sjuigfq5bHFAXoRw==", "user"=>{"email"=>"cesepulveda@miuandes.cl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "cesepulveda@miuandes.cl"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "cesepulveda@miuandes.cl"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?)[0m  [["email", "cesepulveda@miuandes.cl"], ["created_at", "2019-05-25 21:57:56.264479"], ["updated_at", "2019-05-25 21:57:56.264479"], ["encrypted_password", "$2a$11$F9f6LEQCyTit1pXv2vzKMe.Y9yYlDiSRno6GtQX9ogdsb8oeLpzFC"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 309ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 17:57:56 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 423ms (Views: 421.8ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/camila/Desktop/lab-assignment-9-sepulveda-lab9/app/models/application_record.rb:1)
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:33:05 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1149ms (Views: 1131.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 18:33:23 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 65ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:33:23 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 387ms (Views: 385.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 18:33:54 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:33:54 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 417ms (Views: 415.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 18:34:03 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:34:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 406ms (Views: 402.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 18:34:07 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:34:07 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 393ms (Views: 387.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 18:34:08 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:34:08 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 395ms (Views: 392.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 18:39:39 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:39:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 385ms (Views: 382.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:39:44 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 403ms (Views: 400.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 18:39:46 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:39:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 404ms (Views: 402.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2019-05-25 18:39:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sign_in"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-05-25 18:40:06 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:40:06 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 441ms (Views: 439.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2019-05-25 18:40:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/root_path" for 127.0.0.1 at 2019-05-25 18:41:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/root_path"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sign_in" for 127.0.0.1 at 2019-05-25 18:41:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sign_in"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 18:41:38 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:41:38 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 450ms (Views: 446.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2019-05-25 18:43:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-05-25 18:43:41 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:43:41 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 424ms (Views: 421.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:47:57 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 445ms (Views: 441.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 18:48:02 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 50ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:48:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 422ms (Views: 418.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-05-25 18:48:11 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 18:48:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 415ms (Views: 411.9ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/camila/Desktop/lab-assignment-9-sepulveda-lab9/app/models/application_record.rb:1)
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-05-25 19:07:05 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 132ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:07:06 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 1093ms (Views: 1085.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:07:11 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:07:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 391ms (Views: 387.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-05-25 19:07:13 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:07:13 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 389ms (Views: 387.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:08:14 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 464ms (Views: 461.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:08:19 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:08:19 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 395ms (Views: 391.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:08:49 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 449ms (Views: 428.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:08:54 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:08:54 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 412ms (Views: 409.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-05-25 19:11:27 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:11:27 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 427ms (Views: 423.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2019-05-25 19:11:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:13:36 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (467.7ms)
+Completed 500 Internal Server Error in 477ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `is_user_logged_in?' for #<#<Class:0x0000564d93b2e8f0>:0x00007f37520ec730>):
+    1: <% if is_user_logged_in? %>
+    2:   <li>
+    3:   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+    4:   </li>
+  
+app/views/home/index.html.erb:1:in `_app_views_home_index_html_erb___1068029506238053554_69937788316000'
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:14:15 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 505ms (Views: 501.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:14:20 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:14:20 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 425ms (Views: 420.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-05-25 19:14:21 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:14:21 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 402ms (Views: 398.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:17:45 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 418ms (Views: 414.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:17:53 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:17:53 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 407ms (Views: 404.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-05-25 19:17:57 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:17:57 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 403ms (Views: 401.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:22:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 444ms (Views: 441.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:23:03 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:23:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 435ms (Views: 432.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:23:24 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 455ms (Views: 453.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:23:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:23:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 432ms (Views: 427.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:28:48 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 486ms (Views: 483.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:31:44 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 467ms (Views: 458.1ms | ActiveRecord: 5.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-05-25 19:31:49 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R2BB1itLdNHc4Gl5fPHiKvpkzwg3+by/ab9hcBJ2dAiSTPWrAMZwVlIqt5pccaIwxKYIAn3ftejtaIi4rPnz4g=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:31:49 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 448ms (Views: 445.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:31:57 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 481ms (Views: 476.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-05-25 19:32:01 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (2.9ms)
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 629ms (Views: 626.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:32:03 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 475ms (Views: 471.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:32:28 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0WTThmiBEzpclHPVdljTTfmBDErlPjU/ZKYxDugyJTgF7/Fas22hQ0cgNYh7PNWEvjvk5MI7n7GzLd5kT7fK/A==", "user"=>{"email"=>"cesepulveda@miuandes.cl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "cesepulveda@miuandes.cl"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 271ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:32:28 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 451ms (Views: 429.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-05-25 19:32:33 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z63Oq3krS658C8+uOVLq21bnlqGtQ2nbbZ7gs5BD/Y5fzqwFHZwIxOX8JA3xKk7tp78ujIc7FkxKoN6NYVgdHA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:32:33 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 428ms (Views: 425.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:34:02 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 449ms (Views: 448.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:34:05 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vCzRJI7y1yG5bixiO3SJeDy+r05dOJYEdF5YFs/UCqRhvTBHAof+G73bEVlPZmrAkdqqkwN/03E4S+KeKYhp+g==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vCzRJI7y1yG5bixiO3SJeDy+r05dOJYEdF5YFs/UCqRhvTBHAof+G73bEVlPZmrAkdqqkwN/03E4S+KeKYhp+g==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 427ms (Views: 425.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-05-25 19:34:13 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UySfeE8A/VciqmtLUmZgIp21XbUKfjnCNBJTsP0LMJG7iW76orh0+ZhL4Ua4UD4avOCTSiXGJBzHPYRsLte1ow==", "user"=>{"email"=>"cesepulveda@miuandes.cl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "cesepulveda@miuandes.cl"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 248ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-25 19:34:13 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 431ms (Views: 427.3ms | ActiveRecord: 0.1ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/camila/Desktop/lab-assignment-9-sepulveda-lab9/app/models/application_record.rb:1)
